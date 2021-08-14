@@ -1,0 +1,53 @@
+.frame{
+    background-color:transparent;
+    width:fit-content;
+   
+    height: calc(100vh );
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element{
+    position: relative;
+    width: 90vw;
+    height: 90%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.205);
+    scroll-snap-align: center;
+    margin-right:20px;
+    
+    overflow:hidden;
+    transform: scale(90%);
+    
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+   
+    
+    
+   
+}
+
+
+.element.panel{
+    
+  
+  
+}
+.elementpic{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    transform: translate(0%,0%);
+    background-color: tomato;
+}
+.header_title{
+    
+  
+   
+   
+    text-align: end;
+}

@@ -1,0 +1,54 @@
+.element{
+    position: relative;
+    width: 90vw;
+    height: 90%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.205);
+    scroll-snap-align: center;
+    margin-right:20px;
+    
+   
+    transform: scale(90%);
+    
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+   
+    overflow:visible;
+    
+   
+}
+
+
+
+.elementpic{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    width: 20vw;
+    height: 20vw;
+    transform: translate(-20%,-20%);
+    background-color: transparent;
+    border:calc(5px + .5vw) solid indianred;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.elementpic img{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    
+    
+    
+   
+
+}
+.header_title{
+    
+  
+   
+   
+    text-align: end;
+}
