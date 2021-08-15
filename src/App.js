@@ -90,9 +90,7 @@ render(){
 
   return (
     <div className="App" onWheel = {this.handleScroll} onScroll={this.handleparallax}>
-      <div className ="progress_bar_container">
-        <div className ="progress_bar"></div>
-      </div> 
+      
       <div className="background" >
         <img src={bgimg} />
 
@@ -101,7 +99,9 @@ render(){
      
       <Navbar className="navbar" />
       <Frame className="frame"  />
-      
+      <div className ="progress_bar_container">
+        <div className ="progress_bar"></div>
+      </div> 
     
     </div>
   );

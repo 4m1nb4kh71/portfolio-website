@@ -1,8 +1,8 @@
 .frame{
     background-color:transparent;
     width:fit-content;
-   left: 0%;
-   top:0%;
+    left: 0%;
+    top:0%;
     height: 100vh;
     position: relative;
     display: flex;
@@ -10,8 +10,9 @@
     align-items: center;
     
 }
-body{
 
+body{
+    overflow-y: hidden;
 }
 
 .background2{
@@ -42,3 +43,4 @@ body{
    
     transition: 1s;
   }
+
