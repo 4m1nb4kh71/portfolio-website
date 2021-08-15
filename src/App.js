@@ -15,6 +15,7 @@ class App extends Component {
       scrleft : null,
       scrlx:0,
       amount:0,
+      frame:null,
     };
   }
   
@@ -22,8 +23,8 @@ componentDidMount = () =>{
    
  
     const el = document.getElementsByClassName("App").item(0);
-   
-    this.setState({element:el}) ;
+   const frame = document.getElementsByClassName("frame").item(0);
+    this.setState({element:el,frame:frame}) ;
    
 }
 
@@ -61,16 +62,25 @@ handleScroll = (event) =>{
 }
 handleparallax = (e) => {
   
-  this.state.amount  =(this.state.element.scrollLeft);
+  //this.state.amount  =(this.state.element.scrollLeft);
+  this.setState({amount:this.state.element.scrollLeft}); 
   console.log(this.state.amount);
+  console.log(this.state.frame.offsetWidth - (window.innerWidth -100));
+  let hundred =  this.state.frame.offsetWidth - (window.innerWidth -110);
+  let percent = Math.round(((this.state.amount / hundred))*100)  ;
+  console.log(percent);
   const bg = document.getElementsByClassName('background').item(0);
   const bg2 = document.getElementsByClassName('background2').item(0);
   const bg3 = document.getElementsByClassName('background3').item(0);
   const bg4 = document.getElementsByClassName('background4').item(0);
-  bg.style.transform = 'translateX(-'+this.state.amount/100   +'%)';
-  bg2.style.transform = 'translateX(-'+this.state.amount/100  * 50 +'%)';
-  bg3.style.transform = 'translateX(-'+this.state.amount/100  * .3 +'%)';
-  bg4.style.transform = 'translateY(-'+this.state.amount/100  * 2.6 +'%)';
+  const progress_bar = document.getElementsByClassName('progress_bar').item(0);
+
+  bg.style.transform = 'translateX(-'+percent * .6 +'%)';
+  bg2.style.transform = 'translateX(-'+percent * 10  +'%)';
+  bg3.style.transform = 'translateX(-'+percent  +'%)';
+  bg4.style.transform = 'translateY(-'+percent +'%)';
+
+  progress_bar.style.setProperty("width",percent +'%') ;
 }
 
   
@@ -80,6 +90,9 @@ render(){
 
   return (
     <div className="App" onWheel = {this.handleScroll} onScroll={this.handleparallax}>
+      <div className ="progress_bar_container">
+        <div className ="progress_bar"></div>
+      </div> 
       <div className="background" >
         <img src={bgimg} />
 
