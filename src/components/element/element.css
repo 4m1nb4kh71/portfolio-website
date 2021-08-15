@@ -27,7 +27,7 @@
     width: 20vw;
     height: 20vw;
     transform: translate(-20%,-20%);
-    background-color: transparent;
+    background-color:wheat;
     border:calc(5px + .5vw) solid indianred;
     overflow: hidden;
     display: flex;
