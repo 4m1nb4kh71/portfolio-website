@@ -4,7 +4,9 @@ import Navbar from './components/navbar/navbar';
 import Frame from './components/frame/frame';
 import { Component } from 'react';
 import bgimg from './static/images/backg.jpg'
-
+var scrollingDirection = 0; //idle
+var lastScroll = 9999;
+var scrollIdleTime = 100; 
 class App extends Component {
   constructor(props) {
    
@@ -13,16 +15,17 @@ class App extends Component {
       scrolling: false,
       element:null,
       scrleft : null,
-      scrlx:0,
+      percent:null,
       amount:0,
       frame:null,
     };
   }
   
 componentDidMount = () =>{
-   
+
  
     const el = document.getElementsByClassName("App").item(0);
+   
    const frame = document.getElementsByClassName("frame").item(0);
     this.setState({element:el,frame:frame}) ;
    
@@ -34,41 +37,43 @@ componentWillUnmount= () =>{
 }
 
 
+
+
 handleScroll = (event) =>{
-   
- 
-   
-   
- 
+
+    
+
   // this.state.element.scrollLeft += event.deltaY*9;
-    let el = this.state.element;
-    el.scrollLeft += event.deltaY*10;
+   /* let el = this.state.element;
+    el.scrollLeft +=event.deltaY/100 * window.innerWidth/2 ;
+    console.log(timeNow);
     this.setState({element: el});
-    const bg = document.getElementsByClassName('background').item(0);
-  
+    const bg = document.getElementsByClassName('background').item(0);*/
+    var delta = event.deltaY;
+    var timeNow = performance.now();
+    //this to detect only one scroll at a time
+    if (timeNow > (lastScroll + scrollIdleTime) ) {
+       
+      let el = this.state.element;
+      el.scrollLeft +=event.deltaY/100 * window.innerWidth/2 ;
+      console.log(event);
+      this.setState({element: el});
+      const bg = document.getElementsByClassName('background').item(0);
+    }
+    lastScroll = timeNow;
+    console.log(lastScroll );
   
 
-    
-        
-        
-
-  
-  
-    
-      
-      
-    
    
 }
 handleparallax = (e) => {
-  
+
   //this.state.amount  =(this.state.element.scrollLeft);
   this.setState({amount:this.state.element.scrollLeft}); 
-  console.log(this.state.amount);
-  console.log(this.state.frame.offsetWidth - (window.innerWidth -100));
+ 
   let hundred =  this.state.frame.offsetWidth - (window.innerWidth -110);
   let percent = Math.round(((this.state.amount / hundred))*100)  ;
-  console.log(percent);
+  this.setState({percent:percent});
   const bg = document.getElementsByClassName('background').item(0);
   const bg2 = document.getElementsByClassName('background2').item(0);
   const bg3 = document.getElementsByClassName('background3').item(0);
@@ -76,9 +81,9 @@ handleparallax = (e) => {
   const progress_bar = document.getElementsByClassName('progress_bar').item(0);
 
   bg.style.transform = 'translateX(-'+percent * .6 +'%)';
-  bg2.style.transform = 'translateX(-'+percent * 10  +'%)';
-  bg3.style.transform = 'translateX(-'+percent  +'%)';
-  bg4.style.transform = 'translateY(-'+percent +'%)';
+  bg2.style.transform = 'translateX(-'+percent /6  +'%)';
+  bg3.style.transform = 'translateX(-'+percent *3  +'%)';
+  bg4.style.transform = 'translateY(-'+percent*1.43 +'%)';
 
   progress_bar.style.setProperty("width",percent +'%') ;
 }
@@ -89,7 +94,8 @@ handleparallax = (e) => {
 render(){
 
   return (
-    <div className="App" onWheel = {this.handleScroll} onScroll={this.handleparallax}>
+    
+    <div className="App" onWheel={this.handleScroll}  onScroll={this.handleparallax} >
       
       <div className="background" >
         <img src={bgimg} />
@@ -98,11 +104,11 @@ render(){
      
      
       <Navbar className="navbar" />
-      <Frame className="frame"  />
+      <Frame className="frame" />
       <div className ="progress_bar_container">
         <div className ="progress_bar"></div>
       </div> 
-    
+      
     </div>
   );
 

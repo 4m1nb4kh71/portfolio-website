@@ -1,7 +1,7 @@
 .element{
     position: relative;
     width: 90vw;
-    height: 90%;
+    height:fit-content;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.205);
     scroll-snap-align: center;
@@ -45,10 +45,24 @@
    
 
 }
-.header_title{
-    
-  
+hr{
+   position: relative;
    
+    width: 100%;
+}
+.header_title{
+    position: relative;
+    
+    margin: 0;
    
     text-align: end;
+}
+.content_container{
+   
+    position: relative;
+    margin: auto;
+    margin-block:.5%;
+    width: 95%;
+    height: 70vh;
+    background-color: transparent;
 }

@@ -23,10 +23,16 @@ class Element extends Component{
             <h1 className="header_title">{this.state.element_title}</h1>
 
             
+     
+            <hr />
+
+
+            <div className="content_container">
+              
+            </div>
             <div className="elementpic">
                 <img src={this.state.element_img}/>
             </div>
-            <hr />
           </div>
          
     );
