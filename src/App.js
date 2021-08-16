@@ -4,7 +4,7 @@ import Navbar from './components/navbar/navbar';
 import Frame from './components/frame/frame';
 import { Component } from 'react';
 import bgimg from './static/images/backg.jpg'
-var scrollingDirection = 0; //idle
+
 var lastScroll = 9999;
 var scrollIdleTime = 100; 
 class App extends Component {
@@ -49,19 +49,19 @@ handleScroll = (event) =>{
     console.log(timeNow);
     this.setState({element: el});
     const bg = document.getElementsByClassName('background').item(0);*/
-    var delta = event.deltaY;
+  
     var timeNow = performance.now();
     //this to detect only one scroll at a time
     if (timeNow > (lastScroll + scrollIdleTime) ) {
        
       let el = this.state.element;
       el.scrollLeft +=event.deltaY/100 * window.innerWidth/2 ;
-      console.log(event);
+      
       this.setState({element: el});
-      const bg = document.getElementsByClassName('background').item(0);
+      
     }
     lastScroll = timeNow;
-    console.log(lastScroll );
+    
   
 
    

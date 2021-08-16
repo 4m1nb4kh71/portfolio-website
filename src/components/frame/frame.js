@@ -5,7 +5,7 @@ import './frame.css';
 import Element from './../element/element';
 import {profilepic, progpic,rocks} from './../../static/images';
 import Helloworld from '../HelloWorld/helloworld';
-import HorizontalScroll from 'react-scroll-horizontal';
+
 class Frame extends Component{
 
 
