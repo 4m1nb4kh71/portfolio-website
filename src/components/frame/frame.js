@@ -1,10 +1,10 @@
 
 import { Component } from 'react';
 import './frame.css';
-
+import Helloworld from './../HelloWorld/helloworld';
 import Element from './../element/element';
 import {profilepic, progpic,rocks} from './../../static/images';
-import Helloworld from '../HelloWorld/helloworld';
+
 
 class Frame extends Component{
 
