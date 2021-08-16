@@ -1,0 +1,28 @@
+.greeting{
+    position: relative;
+    
+  width: 80%;
+    
+   height: 100%;
+    left: 20%;
+   margin: 0;
+}
+.greeting h1{
+    position: relative;
+    color: lavender;;
+    font-size: calc(40px + 4vw) ;
+    width: fit-content;
+    margin: 0;
+}
+
+.greeting h2{
+    position: relative;
+    font-size: calc(20px + 4vw) ;
+    width:90%;
+    top:10%;
+    left: 15%;
+}
+.helloworld .content_container{
+    background-color: transparent;
+    overflow: hidden;
+}
