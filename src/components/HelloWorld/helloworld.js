@@ -22,20 +22,26 @@ class Helloworld extends Element{
 
     return (
         <div className="element helloworld" >
-        <h1 className="header_title">{this.props.element_title}</h1>
+          <div className="hellobg"></div>
+            <h1 className="header_title">{this.props.element_title}</h1>
 
-        
- 
-        <hr />
+            <hr />
+
+          <div className="container">
+            <div className="elementpic">
+                <img src={this.props.element_img}/>
+            </div>
+            <div className="content_container">
+              <div className="greeting"><h1>Hi there!</h1><h2>I'm Amin Bakhti</h2></div>
+              <p>i'm a web developper</p>
+            </div>
 
 
-        <div className="content_container">
-            <div className="greeting"><h1>Hi there!</h1><h2>I'm Amin Bakhti</h2></div>
+            
+
+          </div>
+     
         </div>
-        <div className="elementpic">
-            <img src={this.props.element_img}/>
-        </div>
-      </div>
     );
 
   }

@@ -8,7 +8,11 @@
   margin: 0;
   padding: 0;
 }
+p{
+  font-size: calc(15px + 2vw) ;
 
+
+}
 
 body {
   

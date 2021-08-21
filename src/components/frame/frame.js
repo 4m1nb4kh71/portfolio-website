@@ -4,6 +4,7 @@ import './frame.css';
 import Helloworld from './../HelloWorld/helloworld';
 import Element from './../element/element';
 import {profilepic, progpic,rocks} from './../../static/images';
+import Whatido from '../whatido/whatido';
 
 
 class Frame extends Component{
@@ -25,14 +26,14 @@ class Frame extends Component{
 
         <div className="layers_container">
           <div className="background2">
-            <img src={rocks}/>
+          
           </div>
-          <div className="background3"></div>
-          <div className="background4"></div>
+         
+          
         </div>
         
-         <Helloworld element_title="Hello World!" element_img={profilepic}/>
-         <Element element_title="What i do ?" element_img={progpic}/>
+         <Helloworld element_title="About me" element_img={profilepic}/>
+         <Whatido element_title="What i do ?" element_img={progpic}/>
          <Element element_title="My projects"/>
          <Element element_title="contacts"/>
        

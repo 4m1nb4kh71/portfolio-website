@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './element.css';
-
+import Helloworld from '../HelloWorld/helloworld';
 class Element extends Component{
 
 
@@ -20,18 +20,24 @@ class Element extends Component{
     return (
 
           <div className="element" >
+          
             <h1 className="header_title">{this.state.element_title}</h1>
 
             
      
             <hr />
 
+            <div className="container">
+              <div className="elementpic">
+                    <img src={this.state.element_img}/>
+              </div>
 
-            <div className="content_container">
-              
-            </div>
-            <div className="elementpic">
-                <img src={this.state.element_img}/>
+              <div className="content_container">
+                  
+              </div>
+               
+
+            
             </div>
           </div>
          

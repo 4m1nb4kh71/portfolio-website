@@ -23,14 +23,15 @@
 
 
 .background2{
-    position: absolute;
+    position: fixed;
     left:0%;
-    top:20% ;
+    top:100% ;
    
-    width:200%;
-    overflow: hidden;
-    
-    transition: 4s;
+    width:25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: rgb(254, 150, 118);
+    transition: 3s;
   }
 
   .background2 img{
@@ -41,26 +42,6 @@
    
     object-fit: cover;
   }
-  .background3{
-    position: absolute;
-    left:25%;
-    top: 0%;
-    width: 12.5%;
-    height: 100%;
-    background-color: rgb(22, 22, 22);
-    transition: 1s;
-    z-index: 3;
-   
-  }
-  .background4{
-    position: absolute;
-    left:50%;
-    top: 0%;
-    width: 25%;
-    height: 100%;
-    background-color: rgb(20, 20, 20);
-   
-    transition: 1s;
-    z-index: 3;
-  }
+ 
+ 
 

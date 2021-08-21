@@ -71,19 +71,21 @@ handleparallax = (e) => {
   //this.state.amount  =(this.state.element.scrollLeft);
   this.setState({amount:this.state.element.scrollLeft}); 
  
-  let hundred =  this.state.frame.offsetWidth - (window.innerWidth -110);
-  let percent = Math.round(((this.state.amount / hundred))*100)  ;
+  let hundred =  (this.state.frame.offsetWidth) - (window.innerWidth );
+  let percent = Math.round((((this.state.amount-100) / hundred))*100)  ;
   this.setState({percent:percent});
   const bg = document.getElementsByClassName('background').item(0);
   const bg2 = document.getElementsByClassName('background2').item(0);
-  const bg3 = document.getElementsByClassName('background3').item(0);
-  const bg4 = document.getElementsByClassName('background4').item(0);
+  const hellobg = document.getElementsByClassName('hellobg').item(0);
+  const whatidobg = document.getElementsByClassName('whatidobg').item(0);
   const progress_bar = document.getElementsByClassName('progress_bar').item(0);
-
-  bg.style.transform = 'translateX(-'+percent * .6 +'%)';
-  bg2.style.transform = 'translateX(-'+percent /6  +'%)';
-  bg3.style.transform = 'translateX(-'+percent *3  +'%)';
-  bg4.style.transform = 'translateY(-'+percent*1.43 +'%)';
+  this.state.element.style.backgroundColor = 'rgb('+( 19 + (percent*1.2))  +','+ (18+ (percent*1.5) )+','+( 30 + percent*5 )+')';
+  bg.style.opacity =  .1 + percent/150 ;
+  bg2.style.transform = 'translate('+percent   +'vw,-'+Math.log10( percent )*50 +'vh)';
+  bg2.style.backgroundColor = 'rgb('+ 254   +','+ (150 + (percent/1.2) )+','+ 118+')';
+  //bg2.style.transform = 'translateX(-'+percent /6  +'%)';
+  hellobg.style.transform = 'translateY(-'+percent  +'%)';
+  whatidobg.style.transform = 'translateY(-'+ percent +'%)';
 
   progress_bar.style.setProperty("width",percent +'%') ;
 }
@@ -98,7 +100,7 @@ render(){
     <div className="App" onWheel={this.handleScroll}  onScroll={this.handleparallax} >
       
       <div className="background" >
-        <img src={bgimg} />
+       
 
       </div>
      
