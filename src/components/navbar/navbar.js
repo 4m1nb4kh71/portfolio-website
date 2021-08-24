@@ -17,9 +17,9 @@ class Navbar extends Component {
         const tab =  document.getElementsByClassName("tab").item(0);
         const current_tab =  document.getElementsByClassName("current_tab").item(0);
        
-        tab_selector.style.setProperty('transform',"translateY("+ current_tab.offsetTop +"px)") ;
+        tab_selector.style.setProperty('transform',"translateX("+ current_tab.offsetLeft +"px)") ;
         
-        tab_selector.style.setProperty('height',tab.clientHeight+"px") ;
+        tab_selector.style.setProperty('width',tab.clientWidth+"px") ;
     }
 
     click = (event) =>{
@@ -41,8 +41,8 @@ class Navbar extends Component {
         const index = tabs.findIndex(tab => tab === event.target);
         console.log(tabs[index].children);
        // tabs[index].style.setProperty('color',"#cd5c5c");
-        tab_selector.style.setProperty('height',tabs[index].clientHeight+"px") ;
-        tab_selector.style.setProperty('transform',"translateY("+ tabs[index].offsetTop +"px)") ;
+        tab_selector.style.setProperty('width',tabs[index].clientWidth+"px") ;
+        tab_selector.style.setProperty('transform',"translateX("+ tabs[index].offsetLeft +"px)") ;
         tab_selector.style.setProperty('transition',".5s") ;
 
          
@@ -55,27 +55,27 @@ class Navbar extends Component {
                 <div className="navfront">
                    
                     <div className="logo">Logo</div> 
-                    <div className="tab_selector"></div>
-                <div className="tabs">
                    
-                    <a href="#" className="tab" onClick={this.click}>
+                    <div className="tabs">
+                    <div className="tab_selector"></div>
+                        <a href="#" className="tab current_tab" onClick={this.click}>
+                            
                         
-                       
-                        tab1
-                    </a>
-                    <a href="#" className="tab current_tab" onClick={this.click}>
-                       
-                        tab2
-                    </a>
-                    <a href="#" className="tab" onClick={this.click}>
-                       
+                            tab1
+                        </a>
+                        <a href="#" className="tab " onClick={this.click}>
+                        
+                            tab2
+                        </a>
+                        <a href="#" className="tab" onClick={this.click}>
+                        
+                            tab
+                        </a>
+                        <a href="#" className="tab" onClick={this.click}>
+                        
                         tab
                     </a>
-                    <a href="#" className="tab" onClick={this.click}>
-                       
-                       tab
-                   </a>
-                </div>
+                    </div>
         
                 </div>
                 

@@ -6,11 +6,11 @@
     background-color: rgb(0, 0, 0);
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    height: 100%;
-    width: 100px;
-    border-radius: 0px 10px 10px 0px;
+    height: 80px;
+    width: 100%;
+   top: 0%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px 2px, rgba(0, 0, 0, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     z-index: 3;
     opacity: .5;
@@ -20,38 +20,40 @@
     transition:  .5s;
    
     transition-delay: 1s;
-    transform: translate(-70%);
+   
 }
 .navfront{
     position: relative;
     background-color: transparent;
     height: 100%;
-    width: 100%;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: row;
+    justify-content: space-around
     
 }
 .logo{
     position: relative;
     background-color: lightcyan;
     display: flex;
+    justify-self: flex-start;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    height: 10%;
+    left: 0%;
+    height: 100%;
+    width: 100px;;
 
    
 }
 .tabs{
     position: relative;
     background-color: transparent;
-    width: 100%;
+    width: 60%;
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    align-items: center;
-   height: 90%;
+   height: 100%;
   
 }
 .tab{
@@ -91,10 +93,10 @@
 .tab_selector{
     position: absolute;
     background-color: indianred;
-    width: 4%;
-    right: 0%;
-    top:10%;
-    height: 30%;
+   
+    left: 0%;
+    bottom:0%;
+    height: 3px;
    
 
 }
