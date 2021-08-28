@@ -43,7 +43,7 @@ togglethemebar = ()=>{
 }
   
 componentDidMount =() =>{
-    this.setthemecolor(this.state.darktheme);
+    this.setthemecolor(this.state.lighttheme);
     const themestter = document.getElementsByClassName('Themesetter').item(0);
     this.setState({themestter:themestter});
    
