@@ -61,7 +61,7 @@ render(){
         <button style={{backgroundColor:this.state.darktheme.sectioncolor,borderColor: this.state.darktheme.sectextcolor }} onClick={()=>this.setthemecolor(this.state.darktheme)}></button>
         <button style={{backgroundColor:this.state.darktheme2.sectioncolor,borderColor: this.state.darktheme2.sectextcolor }} onClick={()=>this.setthemecolor(this.state.darktheme2)}></button>
         <button className="sidebutton" onClick={() => this.togglethemebar()}>
-
+            <p>Themes</p>
         </button>
     </div>
   );

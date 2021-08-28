@@ -24,7 +24,9 @@ fadein = ()=>{
             return;
         }
         
-        
+        entry.target.classList.add('disappear');
+        entry.target.classList.remove('appear');
+           
           
             
         

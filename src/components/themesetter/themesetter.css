@@ -32,6 +32,20 @@ button{
     margin: 0;
     
 }
+.sidebutton p {
+    position: absolute;
+   
+    
+    color: var(--sectionColor);
+    transform: rotate(90deg) translate(50%,100%);
+    
+    font-size: 1em;
+    font-weight:bold;
+    top:0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+}
 .barvisible{
     transform: translateX(0%);
     transition:transform .5s;
