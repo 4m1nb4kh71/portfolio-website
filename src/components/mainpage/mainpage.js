@@ -7,10 +7,7 @@ class Mainpage extends Component{
 fadein = ()=>{
         /************SCROLL ANIMATION****************** */
     const animated = Array.from(document.getElementsByClassName('animated')) ;
-    animated.forEach(element => {
-        element.classList.add('disappear');
-        element.classList.remove('appear');
-    });
+    
     const appearOptions = {
 
         threshold:0,
@@ -28,7 +25,6 @@ fadein = ()=>{
         }
         
         
-           
           
             
         

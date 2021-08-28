@@ -333,31 +333,31 @@
 
 /*---------------------- ANiMAtION-------------------*/
 .disappear{
-   
+  
   
 }
 .appear{
-    
+   
     animation: appear 1s normal backwards;
 }
 .delay1{
    
-   
+    animation-delay: 0s;
 }
 .delay2{
     
-   
+    animation-delay: .1s;
 }
 .delay3{
-    
+    animation-delay: .2s;
 }
 @keyframes appear {
     0%{
-        opacity:0%;
+       
         transform: translateY(100%);
     }
     100%{
-        opacity:100%;
+    
         transform: translateY(0%);
         
     }
