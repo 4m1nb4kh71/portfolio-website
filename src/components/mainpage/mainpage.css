@@ -334,10 +334,10 @@
 /*---------------------- ANiMAtION-------------------*/
 .disappear{
     opacity:0%;
-   transition: .5s;
+  
 }
 .appear{
-    transition: .5s;
+    
     animation: appear 1s normal backwards;
 }
 .delay1{

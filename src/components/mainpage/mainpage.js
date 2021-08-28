@@ -7,30 +7,33 @@ class Mainpage extends Component{
 fadein = ()=>{
         /************SCROLL ANIMATION****************** */
     const animated = Array.from(document.getElementsByClassName('animated')) ;
+    animated.forEach(element => {
+        element.classList.add('disappear');
+        element.classList.remove('appear');
+    });
     const appearOptions = {
 
         threshold:0,
-        rootMargin:"0px 0px 0px 0px",
+        rootMargin:"0px 0px 200px 0px",
     };
     const appearOnScroll = new IntersectionObserver(function(entries,appearOnScroll){
 
     entries.forEach(entry =>{
     
-        if(!entry.isIntersecting){
+        if(entry.isIntersecting){
             
-            entry.target.classList.add('disappear');
-            entry.target.classList.remove('appear');
-          
-        }
-        else{
-           
             entry.target.classList.add('appear');
             entry.target.classList.remove('disappear');
+            return;
+        }
+        
+        
+           
           
             
         
             
-        }
+        
     })
 
     },appearOptions);
