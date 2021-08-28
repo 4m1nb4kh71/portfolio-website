@@ -342,14 +342,14 @@
 }
 .delay1{
    
-    animation-delay: 0s;
+   
 }
 .delay2{
     
-    animation-delay: .1s;
+   
 }
 .delay3{
-    animation-delay: .2s;
+    
 }
 @keyframes appear {
     0%{
