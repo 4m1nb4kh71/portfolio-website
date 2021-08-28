@@ -1,5 +1,7 @@
 
 import { Component } from 'react';
+import { Link as Link1} from 'react-router-dom';
+
 import './navbar.css';
 
 class Navbar extends Component {
@@ -54,27 +56,24 @@ class Navbar extends Component {
             <div className="navbar">
                 <div className="navfront">
                    
-                    <div className="logo">Logo</div> 
+                    
                    
                     <div className="tabs">
                     <div className="tab_selector"></div>
-                        <a href="#" className="tab current_tab" onClick={this.click}>
+                        <Link1 to="/" className="tab current_tab" onClick={this.click}>
                             
                         
-                            tab1
-                        </a>
-                        <a href="#" className="tab " onClick={this.click}>
+                            Home
+                        </Link1>
+                        <Link1  to="/projects" className="tab " onClick={this.click}>
                         
-                            tab2
-                        </a>
+                            Projects
+                        </Link1>
                         <a href="#" className="tab" onClick={this.click}>
                         
                             tab
                         </a>
-                        <a href="#" className="tab" onClick={this.click}>
-                        
-                        tab
-                    </a>
+                     
                     </div>
         
                 </div>

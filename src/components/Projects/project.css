@@ -1,0 +1,51 @@
+
+.Project{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--sectionColor);
+    width: 70%;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-block: 100px;
+    border-radius: 10px;
+}
+
+.project_frame{
+    position: relative;
+   
+    
+    width: calc(100% - 30px);
+   
+    height: fit-content;
+    
+}
+p{
+    padding: 10px;
+}
+.img_container{
+    max-width: 600px;
+}
+img{
+    position: relative;
+    width: 100%;
+   
+   
+}
+@media  screen and (max-width: 1000px) {
+    
+.Project{
+    position: relative;
+    background-color:  var(--sectionColor);
+    width: 100%;
+    height: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+    border-radius: 10px;
+}
+
+   
+    
+}

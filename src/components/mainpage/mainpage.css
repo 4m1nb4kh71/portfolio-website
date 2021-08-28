@@ -5,62 +5,92 @@
     width: 70%;
  
     
-    top:40vh;
+    margin-top: 100px;
    
     left:50%;
     transform: translateX(-50%);
     border-radius: 10px;
-    background-color: rgb(0, 0, 0);
+    background-color: transparent;
     
 }
 .section1{
 
     position: relative;
+    
     width: 100%;
-    height: 80vh;
-    display: flex;
+    height: fit-content;
+    
     border-radius: 10px;
-    flex-direction: column;
-    background-color: rgb(0, 0, 0);
-    top: 20%;
+    transition: .5s;
+    background-color:var(--sectionColor);
+   
 }
+.combo{
+    display: grid;
+    position: relative;
+    left: 50%;
+    width:80% ;
+    height: fit-content;
+    transform: translate(-50%,0%);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "greeting circlee"
+    ;
+    overflow: hidden;
+}
+
 .circle{
-    position: absolute;
-    border-radius: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    width:calc(100px + 20vw);
-    height:calc(100px + 20vw);
+    grid-area: circlee;
+    position: relative;
+   bottom: 0%;
+   left: 50%;
+   transform: translate(-50%,0%);
+    max-width: 350px;
+    height:350px;
+    width:100%;
+ 
     min-width: 100px;
-    min-height: 100px;
-    background-color: rgb(0, 0, 0);
+    
+    background-color: transparent;
 }
 .circle img{
     position: absolute;
     border-radius: 50%;
+    margin: 0;
     left: 50%;
     top: 50% ;
     transform: translate(-50%,-50%);
-    width:95% ;
+    border: 5px solid  var(--sectionColor);
+    width:100% ;
     object-fit: cover;
 }
 .greeting{
-     position: relative;
-     padding-top: 55px;
-    left: 15px;
+    grid-area: greeting;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
     
+    
+    
+}
+.greeting h1{
+   margin: 0;
+   
+   
 }
 
 .whatido{
     position: relative;
-   top: 50px;
+  
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,50px);
     width: 80%;
-    height: 80%;
+    height: fit-content;
     border-radius: 10px;
-    border: 2px solid indianred;
-  background-color: rgba(0, 0, 0, 0.281);
+    border: 2px solid var(--secTextColor);
+  background-color:  transparent;
     z-index: 2;
 }
 .whatido .txt{
@@ -71,7 +101,7 @@
     height:40px;
     transform: translate(-50%,-50%);
     left: 50%;
-    background-color: indianred;
+    background-color: var(--secTextColor);
     border-radius: 10px;
     top: 0;
     display: flex;
@@ -84,7 +114,7 @@
     font-size: calc(10px + 1.5vw) ;
     text-align: center;
    font-weight: bold;
-    color: black;
+    color:var(--sectionColor);
 }
 
 .whatido_content{
@@ -99,6 +129,7 @@
     width:80%;
     text-align: center;
     font-size: calc(20px + 1vw) ;
+    padding-block: 100px;
 }
 /*----------------------------------Section2------------------------*/
 
@@ -108,7 +139,7 @@
     display: flex;
     width: 100%;
     height:fit-content;
-    background-color: rgb(22, 22, 22);display: flex;align-items: center;
+    background-color: var(--backgroundColor);display: flex;align-items: center;
 }
 
 .main_grid{
@@ -147,13 +178,25 @@
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 10px;
-    border:2px solid indianred;
+    border:2px solid var(--secTextColor);
 }
 .tag{
-    background-color: rgba(205, 92, 92, 0.452);
+    position: relative;
+    background-color: transparent;
     border-radius: 10px;
     padding: 3px;
     margin:10px
+}
+.tag::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: .3;
+    background-color: var(--secTextColor);
 }
 
 .social_links{
@@ -168,20 +211,21 @@
     display: flex;
     width: 100%;
     height:fit-content;
-   
+   background-color: var(--sectionColor);
 }
 .projects_container{
     position: relative;
  
    
-    border: 2px solid indianred;
+    border: 2px solid var(--secTextColor);
     width: 80%;
-    height: 80vh;
+    height: fit-content;
     
     left: 50%;
     margin-block: 50px;
     transform: translate(-50%);
     border-radius: 10px;
+  
 }
 .title{
     position: absolute;
@@ -191,8 +235,8 @@
     height: 40px;
     transform: translate(-50%,-50%);
     left: 50%;
-   border: 2px solid indianred;
-   background-color: black;
+   border: 2px solid var(--secTextColor);
+   background-color: var(--sectionColor);
     border-radius: 10px;
     top: 0;
     display: flex;
@@ -204,16 +248,120 @@
     font-size: calc(10px + 1.5vw) ;
     text-align: center;
    font-weight: bold;
-    color: indianred;
+    color: var(--secTextColor);
+}
+
+.projects_content{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width:90%;
+    height:80%;
+    left: 50%;
+    justify-content: center;
+    margin-block: 50px;
+    transform: translate(-50%);
+   overflow-y: hidden;
 }
 
 
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  
+}
+.card_content{
+    position: relative;
+    border: 1px solid rgb(85, 85, 85);
+    border-radius: 10px 10px 0px 0px;
+    
+    width:250px;
+    max-width: 250px;
+    height:400px;
+    
+}
+.card_img_container{
+    position: relative;
+   
+    height: 60%;
+    background-color: teal;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
 
+}
+.card_img_container .img{
+   position: relative;
+   height: 120%;
+   width: 120%;
+   transform: rotate(8deg);
+    object-fit: cover;
+  
+}
+.card_text_content{
+    position: relative;
+    width: 90%;
+    padding: 10px;
+}
+.card_title{
+ position: relative;
+ width: 90%;
+ font-size: 20px;
+}
+.card_desc{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+}
+.card_desc p {
+   
+   margin: 0;
+  
+    
+    padding: 0;
+   font-size: 20px;
+  
+  
+    
+   
+}
 
-
-
-
-
+/*---------------------- ANiMAtION-------------------*/
+.disappear{
+    opacity:0%;
+   
+}
+.appear{
+   
+    animation: appear 1s backwards;
+}
+.delay1{
+   
+    animation-delay: 0s;
+}
+.delay2{
+    
+    animation-delay: .1s;
+}
+.delay3{
+    animation-delay: .2s;
+}
+@keyframes appear {
+    0%{
+        opacity:0%;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity:100%;
+        transform: translateY(0%);
+        
+    }
+}
 
 
 
@@ -230,7 +378,7 @@
         left:50%;
         transform: translateX(-50%);
         border-radius: 5px;
-        background-color: rgb(0, 0, 0);
+        background-color: transparent;
     }
     .main_grid{
         position: relative;
@@ -249,4 +397,19 @@
         ;
         gap: 20px;
     }
+    .combo{
+        display: grid;
+        position: relative;
+        left: 50%;
+        width:100% ;
+        height: fit-content;
+        transform: translate(-50%,0%);
+        grid-template-columns: 1fr;
+        grid-template-rows: fit-content 2fr;
+        grid-template-areas: 
+        "circlee"
+        "greeting"
+        ;
+    }
+    
 }

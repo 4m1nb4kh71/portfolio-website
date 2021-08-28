@@ -1,8 +1,9 @@
 :root{
-  --buttonTextcolor : white;
-  --buttonColor : transparent;
-
-  --bigtextcolor:rgb(255, 255, 255);
+  --backgroundColor: rgb(22, 22, 22);
+  --sectionColor:rgb(0, 0, 0);
+  --secTextColor:indianred;
+  --textColor:rgb(255, 255, 255);
+    
 }
 *{
   margin: 0;
@@ -12,17 +13,16 @@ p{
   font-size: 1.2em;
  
   margin-block: 16px;
-  color: white;
+  color: var(--textColor);
   z-index: 1;
+  
+  
+}
 
-}
-html, body, #root {
-  height: 100%;
-}
 body {
   
  
- 
+  
  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -33,9 +33,9 @@ body {
  
  
 
-  background-color: rgb(255, 144, 144);
+  background-color: var(--secTextColor);
 
-
+  transition: .5s;
   
 }
 
@@ -47,18 +47,27 @@ code {
 }
 
 h1{
-  color: var(--bigtextcolor);
+  color: var(--textColor);
   font-size:calc(30px + 2vw);
   margin: 5px;
  
 
 }
+h3{
+  color: var(--textColor);
+}
 .secTextColor{
-  color: indianred;
+  color: var(--secTextColor);
 }
 a{
+  text-decoration: none;
   font-size:calc(12px + .7vw);
 }
-
-
+small{
+  color: var(--textColor);
+}
+li{
+  list-style:inside;
+  list-style-type:"- ";
+}
 

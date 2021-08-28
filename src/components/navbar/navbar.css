@@ -3,7 +3,7 @@
 
 
 .navbar{
-    background-color: rgb(0, 0, 0);
+    background-color: var(--sectionColor);
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -19,7 +19,7 @@
    
     transition:  .5s;
    
-    transition-delay: 1s;
+    
    
 }
 .navfront{
@@ -61,11 +61,11 @@
     width:100%;
     position: relative;
    
-    background-color: var(--buttonColor);
+    background-color: transparent;
     
     
     text-decoration: none;
-    color: var(--buttonTextcolor);
+    color: var(--textColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,7 +92,7 @@
 
 .tab_selector{
     position: absolute;
-    background-color: indianred;
+    background-color: var(--secTextColor);
    
     left: 0%;
     bottom:0%;
@@ -101,5 +101,5 @@
 
 }
 .current_tab{
-  color: indianred;
+  color: var(--secTextColor);
 }
