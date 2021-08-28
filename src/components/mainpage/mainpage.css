@@ -70,7 +70,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     
     
     
@@ -334,11 +334,11 @@
 /*---------------------- ANiMAtION-------------------*/
 .disappear{
     opacity:0%;
-   
+   transition: .5s;
 }
 .appear{
-   
-    animation: appear 1s backwards;
+    transition: .5s;
+    animation: appear 1s normal backwards;
 }
 .delay1{
    
