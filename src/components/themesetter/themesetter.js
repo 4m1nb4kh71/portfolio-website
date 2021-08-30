@@ -37,9 +37,9 @@ setthemecolor =(theme) =>{
 
 }
 togglethemebar = ()=>{
-   console.log("clicked");
+  
     this.state.themestter.classList.toggle('barvisible');
-    console.log(this.state.themestter);
+  
 }
   
 componentDidMount =() =>{

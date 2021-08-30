@@ -1,0 +1,13 @@
+.Allprojects{
+    height:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Allprojects>h1{
+    color: var(--secTextColor);
+}
+.Allprojects>h4{
+    color: var(--textColor);
+}

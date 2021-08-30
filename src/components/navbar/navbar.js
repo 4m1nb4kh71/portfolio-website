@@ -41,7 +41,7 @@ class Navbar extends Component {
         const tabs =Array.from(event.target.parentElement.children);
         
         const index = tabs.findIndex(tab => tab === event.target);
-        console.log(tabs[index].children);
+       
        // tabs[index].style.setProperty('color',"#cd5c5c");
         tab_selector.style.setProperty('width',tabs[index].clientWidth+"px") ;
         tab_selector.style.setProperty('transform',"translateX("+ tabs[index].offsetLeft +"px)") ;
@@ -65,14 +65,14 @@ class Navbar extends Component {
                         
                             Home
                         </Link1>
-                        <Link1  to="/projects" className="tab " onClick={this.click}>
+                        <Link1  to="/allprojects" className="tab " onClick={this.click}>
                         
                             Projects
                         </Link1>
-                        <a href="#" className="tab" onClick={this.click}>
+                        <Link1 to="/allprojects" className="tab" onClick={this.click}>
                         
-                            tab
-                        </a>
+                            Articles
+                        </Link1>
                      
                     </div>
         
